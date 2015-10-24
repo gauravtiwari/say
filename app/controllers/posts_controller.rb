@@ -5,7 +5,7 @@ class PostsController < ApplicationController
 
   # GET /posts
   def index
-    @posts = Post.all
+    @posts = Post.all.to_a.map{|p| {id: p.id, text: p.text, name: p.user_name} }
 
     respond_to do |format|
       format.html
