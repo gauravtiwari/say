@@ -113,7 +113,6 @@ GEM
     redis (3.2.1)
     secure_headers (2.4.3)
       user_agent_parser
-    spring (1.4.0)
     sprockets (3.4.0)
       rack (> 1, < 3)
     sprockets-rails (2.3.3)
@@ -144,7 +143,6 @@ DEPENDENCIES
   react_webpack_rails
   readthis
   secure_headers
-  spring
 
 BUNDLED WITH
    1.10.6

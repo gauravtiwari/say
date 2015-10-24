@@ -18,15 +18,15 @@ gem 'readthis'
 gem 'hiredis'
 gem 'oj'
 
+# Throttle Malacious requests
+gem 'rack-attack'
+
 group :production do
   gem 'rails_12factor'
-  # Throttle Malacious requests
-  gem 'rack-attack'
   gem "secure_headers", :require => 'secure_headers'
 end
 
 group :development do
-  gem 'spring'
   gem 'foreman'
   gem 'figaro'
 end
