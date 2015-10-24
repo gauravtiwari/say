@@ -1,3 +1,4 @@
+require "active_support/core_ext"
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
@@ -9,6 +10,16 @@ Rails.application.configure do
   # and those relying on copy on write to perform better.
   # Rake tasks automatically ignore this option for performance.
   config.eager_load = true
+
+  # Setup caching to test in development
+  config.cache_store = :readthis_store, {
+    expires_in: 2.weeks.to_i,
+    namespace: 'cache',
+    compress: true,
+    pool_size: 5,
+    compression_threshold: 2.kilobytes,
+    redis: { url: ENV['REDIS_URL'], driver: :hiredis }
+  }
 
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
@@ -42,26 +53,12 @@ Rails.application.configure do
   # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for NGINX
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
-  # config.force_ssl = true
+  config.force_ssl = true
 
   # Use the lowest log level to ensure availability of diagnostic information
   # when problems arise.
   config.log_level = :debug
 
-  # Prepend all log lines with the following tags.
-  # config.log_tags = [ :subdomain, :uuid ]
-
-  # Use a different logger for distributed setups.
-  # config.logger = ActiveSupport::TaggedLogging.new(SyslogLogger.new)
-
-  # Use a different cache store in production.
-  # config.cache_store = :mem_cache_store
-
-  # Enable serving of images, stylesheets, and JavaScripts from an asset server.
-  # config.action_controller.asset_host = 'http://assets.example.com'
-
-  # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
-  # the I18n.default_locale when a translation cannot be found).
   config.i18n.fallbacks = true
 
   # Send deprecation notices to registered listeners.
