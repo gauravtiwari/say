@@ -15,7 +15,7 @@ require "sprockets/railtie"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-module Say
+module TeamSays
   class Application < Rails::Application
     # Autoload lib
     config.autoload_paths += Dir["#{config.root}/app/lib/*"]

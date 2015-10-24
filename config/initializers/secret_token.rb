@@ -16,4 +16,4 @@
 # Using secret_token for rails3 compatibility. Change to secret_key_base
 # to avoid deprecation warning.
 # Can be safely removed in a rails3 api-only application.
-Say::Application.config.secret_token = '6ccf5fc85dff3d31b758de4d381b93f902114c87709d7cfdc855692e1c318048ac276ce32c5da26032307fac5284762a9f498383d0a1f756293884dd3f7a8139'
+TeamSays::Application.config.secret_token = '6ccf5fc85dff3d31b758de4d381b93f902114c87709d7cfdc855692e1c318048ac276ce32c5da26032307fac5284762a9f498383d0a1f756293884dd3f7a8139'
