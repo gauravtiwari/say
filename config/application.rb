@@ -6,7 +6,7 @@ require "rails"
 #require "active_job/railtie"
 #require "active_record/railtie"
 require "action_controller/railtie"
-require "action_mailer/railtie"
+#require "action_mailer/railtie"
 require "action_view/railtie"
 require "sprockets/railtie"
 # require "rails/test_unit/railtie"
@@ -17,6 +17,15 @@ Bundler.require(*Rails.groups)
 
 module Say
   class Application < Rails::Application
+    # Autoload lib
+    config.autoload_paths += Dir["#{config.root}/app/lib/*"]
 
+    # Configure rails g to skip helper/assets files
+    config.generators do |g|
+      g.assets = false
+      g.helper = false
+      g.view_specs      false
+      g.helper_specs    false
+    end
   end
 end
