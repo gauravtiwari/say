@@ -1,3 +1,3 @@
 module Slack
-  TOKEN = ENV['SLACK_TOKEN']
+  TOKENS = ENV.fetch('SLACK_TOKENS').split(',')
 end
