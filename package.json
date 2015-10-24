@@ -26,7 +26,8 @@
   "scripts": {
     "test": "karma start",
     "start": "webpack -w --config webpack/dev.config.js",
-    "build": "webpack -p --config webpack/production.config.js"
+    "build": "webpack -p --config webpack/production.config.js",
+    "postinstall": "webpack -p --config webpack/production.config.js"
   },
   "license": "",
   "engines": {
