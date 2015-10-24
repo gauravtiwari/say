@@ -5,7 +5,7 @@ class PostsController < ApplicationController
 
   # GET /posts
   def index
-    @posts = Post.all.to_a.map{|p| {id: p.id, text: p.text, name: p.user_name} }
+    @posts = Post.all.to_a
 
     respond_to do |format|
       format.html
@@ -61,7 +61,7 @@ class PostsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def post_params
-      params.permit(:timestamp, :user_id, :user_name, :text)
+      params.permit(:user_id, :user_name, :text)
     end
 
     # Setup slack responder
