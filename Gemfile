@@ -18,7 +18,7 @@ gem 'react_webpack_rails', github: 'netguru/react_webpack_rails'
 
 # Use redis as database
 gem 'ohm'
-
+gem 'ohm-contrib'
 # Setup caching and Marshalling using Redis
 gem 'readthis'
 gem 'hiredis'

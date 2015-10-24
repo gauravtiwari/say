@@ -78,6 +78,8 @@ GEM
       nido
       redic (~> 1.5.0)
       stal
+    ohm-contrib (2.2.0)
+      ohm (~> 2.2)
     oj (2.13.0)
     passenger (5.0.21)
       rack
@@ -160,6 +162,7 @@ DEPENDENCIES
   hiredis
   jquery-rails
   ohm
+  ohm-contrib
   oj
   passenger
   rack-attack
