@@ -1,0 +1,1 @@
+<%= react_component('post-list', { posts: Post.all.to_a.map{|p| {id: p.id, text: p.text, name: p.user_name} } }) %>
