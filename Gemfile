@@ -8,7 +8,6 @@ gem 'rails', '4.2.4'
 gem 'passenger'
 
 # Setup react and dependencies
-gem 'therubyracer', platforms: :ruby
 gem 'react_webpack_rails'
 
 # Use redis as database
