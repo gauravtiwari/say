@@ -61,7 +61,7 @@ class PostsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def post_params
-      params.permit(:token, :timestamp, :user_id, :user_name, :command, :text, :trigger_word)
+      params.permit(:timestamp, :user_id, :user_name, :text)
     end
 
     # Setup slack responder
