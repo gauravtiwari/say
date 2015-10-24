@@ -1,14 +1,20 @@
 ruby '2.2.3'
 source 'https://rubygems.org'
+source 'https://rails-assets.org' do
+  gem 'rails-assets-swiper'
+end
 
 # Setup Rails and API
 gem 'rails', '4.2.4'
 
 # Setup server
 gem 'passenger'
+gem 'jquery-rails'
 
 # Setup react and dependencies
-gem 'react_webpack_rails'
+gem 'sass-rails', '~> 5.0'
+gem 'uglifier', '>= 1.3.0'
+gem 'react_webpack_rails', github: 'netguru/react_webpack_rails'
 
 # Use redis as database
 gem 'ohm'
