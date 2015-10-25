@@ -30,7 +30,7 @@ class PostsController < ApplicationController
       AddBackgroundJob.perform_later(@post.id)
       render text: responder.response.to_s
     else
-      render text: "Please add a text /say [text]"
+      render text: "Please add a text command: /say [text]"
     end
 
   end
