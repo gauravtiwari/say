@@ -26,11 +26,11 @@ class PostsController < ApplicationController
   def create
     render nothing: true, status: :ok and return unless responder.respond?
     @post = Post.new(post_params)
-    if params[:command].present? && @post.save
+    if params[:text].present? && @post.save
       AddBackgroundJob.perform_later(@post.id)
       render text: responder.response.to_s
     else
-      render json: { text: responder.response.to_s }
+      render text: "Please add a text /say [text]"
     end
 
   end
