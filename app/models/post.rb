@@ -1,7 +1,4 @@
-class Post < Ohm::Model
-  include Ohm::Timestamps
+class Post < ActiveRecord::Base
+  mount_uploader :background, BackgroundUploader
 
-  attribute :user_id
-  attribute :user_name
-  attribute :text
 end
