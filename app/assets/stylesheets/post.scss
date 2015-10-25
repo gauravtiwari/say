@@ -1,36 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=Merriweather:400,700italic,700,400italic);
-
-html {
-  height: 100%;
-  position: relative;
-}
-
-body {
-  color: #fff;
-  font-family: Merriweather, Georgia;
-  font-style: italic;
-  padding: 0;
-  margin: 0;
-  position: relative;
-  height: 100%;
-  transition: background-color 0.5s;
-}
-
-.content {
-  height: 100%;
-  width: 100%;
-  position: relative;
-  div {
-    width: 100%;
-    height: 100%;
-  }
-}
-
-a {
-  color: #fff;
-  text-decoration: none;
-}
-
 .centered {
   margin: 0 auto;
   width: 70%
@@ -53,7 +20,28 @@ small {
 }
 .quote {
   display: inline;
+  font-weight: 700;
   font-size: 30pt;
+}
+
+@media (max-width: 680px) {
+  .quote {
+    display: inline;
+    font-size: 18pt;
+  }
+  .logo {
+    margin: 17px 0 10px 20px;
+    width: 100%;
+    text-align: center;
+  }
+  .slogan {
+    display:none;
+  }
+  footer .credits {
+    margin: 17px 0 10px 20px;
+    float: left;
+    width: 100%;
+  }
 }
 
 .swiper-container {
