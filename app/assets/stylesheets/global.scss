@@ -12,9 +12,11 @@ body {
   font-style: italic;
   padding: 0;
   margin: 0;
+  overflow-x:hidden;
   -webkit-font-smoothing: antialiased;
   position: relative;
   height: 100%;
+  width: 100%;
   transition: background-color 0.5s;
   .content {
     height: 100%;
