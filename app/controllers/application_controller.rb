@@ -1,6 +1,4 @@
 class ApplicationController < ActionController::Base
-  before_filter :setup_headers, if: :production?
-
   # Setup Secure header
   ensure_security_headers(
     :hsts             => {:max_age => 631138519, :include_subdomains => false},
