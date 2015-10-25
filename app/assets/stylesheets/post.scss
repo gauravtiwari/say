@@ -1,36 +1,29 @@
 @import url(https://fonts.googleapis.com/css?family=Merriweather:400,700italic,700,400italic);
 
-@keyframes pop {
-  from { opacity: 0; transform: scale(0.8); }
-  to { opacity: 1; transform: scale(1); }
+html {
+  height: 100%;
+  position: relative;
 }
 
-html {
-height: 100%;
-}
-html, body {
+body {
+  color: #fff;
+  font-family: Merriweather, Georgia;
+  font-style: italic;
+  padding: 0;
+  margin: 0;
   position: relative;
   height: 100%;
-}
-body {
-  background: #eee;
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  color:#000;
-  margin: 0;
-  padding: 0;
+  transition: background-color 0.5s;
 }
 
 .content {
   height: 100%;
+  width: 100%;
+  position: relative;
   div {
+    width: 100%;
     height: 100%;
   }
-}
-
-.repository {
-  height: 100%;
-  position: relative;
 }
 
 a {
@@ -39,65 +32,38 @@ a {
 }
 
 .centered {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  width: 80%;
-  margin: 0;
-  padding: 0;
-  transform: translate(-50%, -50%);
+  margin: 0 auto;
+  width: 70%
 }
 
 blockquote {
   text-align: center;
+  color: #fff;
+  .author {
+    text-transform: capitalize;
+  }
 }
-
+small {
+  font-size: 11px;
+}
+.clearfix {
+  display: block;
+  margin-top: 20px;
+  clear: both;
+}
 .quote {
   display: inline;
   font-size: 30pt;
 }
 
-footer {
-  display: inline;
-  position: relative;
-  top: -5px;
-}
-
-.links {
-  opacity: 0;
-  animation: pop 0.5s 2s ease-in-out;
-  animation-fill-mode: forwards;
-  position: absolute;
-  bottom: 20px;
-  margin: 0 auto;
-  width: 100%;
-  text-align: center;
-}
-
-.links .link {
-  border-bottom: 1px solid white;
-}
-
 .swiper-container {
   width: 100%;
   height: 100%;
-  margin-left: auto;
-  margin-right: auto;
 }
 .swiper-slide {
   text-align: center;
-  font-size: 18px;
   background: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
   align-items: center;
 }
+

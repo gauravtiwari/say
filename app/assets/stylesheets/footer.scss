@@ -1,0 +1,22 @@
+
+/*
+  Footer Styles
+  Responsible for styling footer
+*/
+
+footer {
+  height: 56px;
+  font-size: 12px;
+  transition: all 0.2s ease-in-out;
+  position:absolute;
+  bottom: 0;
+  text-shadow: none;
+  width: 100%;
+  z-index: 1020;
+
+  .credits {
+    margin: 17px 0 10px 20px;
+    float: left;
+    width: 30%;
+  }
+}
