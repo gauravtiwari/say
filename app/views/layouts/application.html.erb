@@ -26,8 +26,27 @@
   </head>
 
   <body class="<%= controller_name %> <%= action_name %>">
+    <!-- Header -->
+    <header>
+      <div class="logo">
+        <a href="/hello">TeamSays</a>
+        <span>curated via slack</span>
+      </div>
+
+      <div class="slogan">
+        <h1>
+          Awesome team rants at one place
+        </h1>
+      </div>
+    </header>
+    <!-- End Header -->
     <div class="content">
       <%= yield %>
     </div>
+
+    <footer>
+      <p class="credits">Image Credits: Antonio</p>
+    </footer>
+
   </body>
 </html>

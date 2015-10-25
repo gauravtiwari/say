@@ -1,1 +1,24 @@
-<%= react_component('post-list', { posts: @posts }) %>
+<div class="swiper-container">
+  <div class="swiper-wrapper">
+    <% @posts.each do |post| %>
+      <div class="swiper-slide" style="background: url(<%= post.background.url %>) no-repeat center center; background-size: cover;">
+        <blockquote class="centered">
+          <p class="quote"><%= post.text %></p>
+          <section class="author clearfix"> -
+            <%= post.user_name %>
+            <small>( <%= time_ago_in_words(post.created_at) %> ago )</small>
+          </section>
+        </blockquote>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<script type="text/javascript">
+  var swiper = window.Swiper;
+  swiper('.swiper-container', {
+    loop: true,
+    autoplay: 5000,
+    autoplayDisableOnInteraction: false
+  });
+</script>
