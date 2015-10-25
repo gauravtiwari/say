@@ -31,10 +31,10 @@ gem 'sidekiq'
 
 # Throttle Malacious requests
 gem 'rack-attack'
+gem "secure_headers", :require => 'secure_headers'
 
 group :production do
   gem 'rails_12factor'
-  gem "secure_headers", :require => 'secure_headers'
 end
 
 group :development do
