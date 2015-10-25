@@ -9,7 +9,7 @@ class Slack::Response
   end
 
   def response
-    @response ||= "You asked: #{message}"
+    @response ||= "You asked to post: #{message}"
   end
 
   private
