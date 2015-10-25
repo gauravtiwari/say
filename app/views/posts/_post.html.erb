@@ -3,7 +3,7 @@
     <p class="quote"><%= post.text %></p>
     <section class="author clearfix"> -
       <%= post.user_name %>
-      <small>( <%= time_ago_in_words(post.created_at) %> ago )</small>
+      <small>( <%= local_time_ago(post.created_at) %> )</small>
     </section>
   </blockquote>
 </div>

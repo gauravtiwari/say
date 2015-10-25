@@ -33,6 +33,9 @@ gem 'sidekiq'
 gem 'rack-attack'
 gem "secure_headers", :require => 'secure_headers'
 
+# Time
+gem 'local_time'
+
 group :production do
   gem 'rails_12factor'
 end
