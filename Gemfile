@@ -6,6 +6,7 @@ end
 
 # Setup Rails and API
 gem 'rails', '4.2.4'
+gem 'pg'
 
 # Setup server
 gem 'passenger'
@@ -14,15 +15,20 @@ gem 'jquery-rails'
 # Setup react and dependencies
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
-gem 'react_webpack_rails', github: 'netguru/react_webpack_rails'
+gem 'autoprefixer-rails'
 
-# Use redis as database
-gem 'ohm'
-gem 'ohm-contrib'
 # Setup caching and Marshalling using Redis
 gem 'readthis'
 gem 'hiredis'
 gem 'oj'
+
+# Image Processing
+gem "mini_magick"
+gem 'carrierwave'
+gem 'fog', require: 'fog/google'
+
+# Background job
+gem 'sidekiq'
 
 # Throttle Malacious requests
 gem 'rack-attack'
