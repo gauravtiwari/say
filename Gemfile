@@ -10,7 +10,6 @@ gem 'pg'
 
 # Setup server
 gem 'passenger'
-gem 'jquery-rails'
 
 # Setup react and dependencies
 gem 'sass-rails', '~> 5.0'
