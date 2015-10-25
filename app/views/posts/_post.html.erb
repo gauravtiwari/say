@@ -1,0 +1,9 @@
+<div class="swiper-slide" style="background: url(<%= post.background.url %>) no-repeat center center; background-size: cover;">
+  <blockquote class="centered">
+    <p class="quote"><%= post.text %></p>
+    <section class="author clearfix"> -
+      <%= post.user_name %>
+      <small>( <%= time_ago_in_words(post.created_at) %> ago )</small>
+    </section>
+  </blockquote>
+</div>
